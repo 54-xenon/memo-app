@@ -1,15 +1,15 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class MemoTile extends StatelessWidget {
   final String memoName;
   final dynamic memoContents;
+  final bool memoCompleted;
 
   const MemoTile({
     super.key,
     required this.memoName,
     required this.memoContents,
+    required this.memoCompleted,
   });
 
   @override

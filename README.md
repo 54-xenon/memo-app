@@ -23,3 +23,9 @@ setStateとSQWQLiteだけを使ったシンプルなメモアプリ
 - ダークモード
 - ListView.builderを使った並び替え機能
 - firebaseとの連携
+# 実行方法
+git cloneでそのまま実行できるはず。
+# 使用したパッケージ
+- SQlite
+- flutter_slidable ^3.1.2
+- 状態管理はsetStateのみ(今の所)

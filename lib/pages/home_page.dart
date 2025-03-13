@@ -9,6 +9,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // memo list
+  List memoList = [
+    // memoName, memoContent, memoCompleted
+    ["first memo",
+     "メモのタイトルと内容を表示する。メモは今の所テキストベース、今後いろいろ機能を拡張していいきたい",
+     false],
+    ["first memo",
+     "メモのタイトルと内容を表示する。メモは今の所テキストベース、今後いろいろ機能を拡張していいきたい",
+     false],
+    ["first memo",
+     "メモのタイトルと内容を表示する。メモは今の所テキストベース、今後いろいろ機能を拡張していいきたい",
+     false],
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,15 +38,8 @@ class _HomePageState extends State<HomePage> {
           // ここにメモのタイトルを表示するものを作成する
           MemoTile(
             memoName: "first memo",
-            memoContents: "チンチン座みゅらい垢かカカカカかかカカかかかかかかかかかk",
-          ),
-          MemoTile(
-            memoName: "first memo",
-            memoContents: "チンチン座みゅらい垢かカカカカかかカカかかかかかかかかかk",
-          ),
-          MemoTile(
-            memoName: "first memo",
-            memoContents: "チンチン座みゅらい垢かカカカカかかカカかかかかかかかかかk",
+            memoContents: "メモのタイトルとその内容を表示する。メモはテキストベースで今後、リマインダーとかAI機能とかも...",
+            memoCompleted: false,
           ),
         ],
       ),
