@@ -15,5 +15,11 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # memo-app
-# memo-app
-# memo-app
+setStateとSQWQLiteだけを使ったシンプルなメモアプリ
+- メモぼタイトルとメモのテキスト、日時を保存する
+- メモの追加。削除、編集を可能にする
+-  データベースはSQLiteだから永続化できる
+# いつか実装したい機能
+- ダークモード
+- ListView.builderを使った並び替え機能
+- firebaseとの連携
