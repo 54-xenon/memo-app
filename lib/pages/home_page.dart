@@ -14,6 +14,11 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text("memo"),
       ),
+      body: ListView(
+        children: [
+          // ここにメモのタイトルを表示するものを作成する
+        ],
+      ),
     );
   }
 }
