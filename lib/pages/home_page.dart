@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:memoapp/util/add_page.dart';
+import 'package:memoapp/pages/add_page.dart';
 import 'package:memoapp/util/memo_tile.dart';
 
 class HomePage extends StatefulWidget {
