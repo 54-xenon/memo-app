@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memoapp/util/add_page.dart';
 import 'package:memoapp/util/memo_tile.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,9 +19,6 @@ class _HomePageState extends State<HomePage> {
     ["first memo",
      "メモのタイトルと内容を表示する。メモは今の所テキストベース、今後いろいろ機能を拡張していいきたい",
      false],
-    ["first memo",
-     "メモのタイトルと内容を表示する。メモは今の所テキストベース、今後いろいろ機能を拡張していいきたい",
-     false],
   ];
   @override
   Widget build(BuildContext context) {
@@ -33,15 +31,15 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.yellow[300],
         child: Icon(Icons.add),
       ),
-      body: ListView(
-        children: [
-          // ここにメモのタイトルを表示するものを作成する
-          MemoTile(
-            memoName: "first memo",
-            memoContents: "メモのタイトルとその内容を表示する。メモはテキストベースで今後、リマインダーとかAI機能とかも...",
-            memoCompleted: false,
-          ),
-        ],
+      body: ListView.builder(
+        itemCount: memoList.length,
+        itemBuilder: (context, index) {
+          return MemoTile(
+            memoName: memoList[index][0],
+            memoContents: memoList[index][1],
+            memoCompleted: memoList[index][2],
+          );
+        },
       ),
     );
   }
