@@ -27,7 +27,12 @@ class _HomePageState extends State<HomePage> {
         title: const Text("Memo"),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => AddPage(
+            onSave: () {},
+            onCancel: () => Navigator.of(context).pop(),
+          )));
+        },
         backgroundColor: Colors.yellow[300],
         child: Icon(Icons.add),
       ),
