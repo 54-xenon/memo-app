@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:memoapp/pages/add_page.dart';
 import 'package:memoapp/util/memo_tile.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,12 +26,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text("Memo"),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => AddPage(
-            onSave: () {},
-            onCancel: () => Navigator.of(context).pop(),
-          )));
-        },
+        onPressed: () {},
         backgroundColor: Colors.yellow[300],
         child: Icon(Icons.add),
       ),
