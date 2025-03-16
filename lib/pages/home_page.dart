@@ -18,7 +18,7 @@ final _contentController = TextEditingController();
   List memoList = [
     // memoName, memoContent, memoCompleted
     ["first memo",
-     "メモのタイトルと内容を表示する。メモは今の所テキストベース、今後いろいろ機能を拡張していいきたい",
+     "メモのタイトルと内容を表示する。メモは今の所テキストベースで、今後いろいろ機能を拡張してい行きたい",
      false],
   ];
   // saveNewmemo
@@ -46,6 +46,14 @@ final _contentController = TextEditingController();
       }
     );
   }
+
+  // delete memo
+  void deleteMemoAction(int index) {
+    // setStateを使用してmemoListからメモを削除する
+    setState(() {
+      memoList.removeAt(index);
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,6 +72,7 @@ final _contentController = TextEditingController();
             memoName: memoList[index][0],
             memoContents: memoList[index][1],
             memoCompleted: memoList[index][2],
+            deleteMemo: (context) => deleteMemoAction(index),
           );
         },
       ),

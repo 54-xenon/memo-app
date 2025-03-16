@@ -18,11 +18,13 @@ samples, guidance on mobile development, and a full API reference.
 setStateとSQWQLiteだけを使ったシンプルなメモアプリ
 - メモぼタイトルとメモのテキスト、日時を保存する
 - メモの追加。削除、編集を可能にする
--  データベースはSQLiteだから永続化できる -> どん感じで実装しようか検討中
+-  DBはSQliteを使用してデータを永続化できるようにする
 # いつか実装したい機能
 - ダークモード
 - ListView.builderを使った並び替え機能
-- firebaseとの連携
+- 入力するダイアログボックスを何とかしたい
+- 追加したメモを編集できる機能をつけたい
+- タブレットレイアウトに最適化させる
 # 実行方法
 git cloneでそのまま実行できるはず。
 # 使用したパッケージ
