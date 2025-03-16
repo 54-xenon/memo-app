@@ -20,6 +20,7 @@ class DaialogBox extends StatelessWidget {
       content: Container(
         height: 160,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // title Textfild
             TextField(
@@ -32,6 +33,9 @@ class DaialogBox extends StatelessWidget {
             SizedBox(height: 8),
             // content textFild
             TextField(
+              // 行数の上限を指定しない
+              maxLines: null, 
+              textAlignVertical: TextAlignVertical.top,
               controller: contentController,
               decoration: InputDecoration(
                 hintText: "ここにメモを入力してください..."
@@ -44,7 +48,7 @@ class DaialogBox extends StatelessWidget {
                 // Sabe button
                 MyButton(text: "Save", onPressed: onSave),
                 // cancel button
-                MyButton(text: "Cancek", onPressed: onCancel),
+                MyButton(text: "Cancel", onPressed: onCancel),
               ],
             )
           ],

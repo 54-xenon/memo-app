@@ -27,6 +27,7 @@ final _contentController = TextEditingController();
     setState(() {
       memoList.add([_titleController.text, _contentController.text, false]);
       _titleController.clear();
+      _contentController.clear();
     });
     Navigator.of(context).pop();
   }
@@ -38,7 +39,7 @@ final _contentController = TextEditingController();
       builder: (context) {
         return DaialogBox(
           titleController: _titleController,
-          contentController: _titleController,
+          contentController: _contentController,
           onSave: saveNewTask,
           onCancel: () => Navigator.of(context).pop(),
         );
