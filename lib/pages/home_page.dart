@@ -47,6 +47,12 @@ final _contentController = TextEditingController();
     );
   }
 
+  // archive memo action
+  void archiveMemoaction() {
+    // setState
+    
+  }
+
   // delete memo
   void deleteMemoAction(int index) {
     // setStateを使用してmemoListからメモを削除する
@@ -73,6 +79,7 @@ final _contentController = TextEditingController();
             memoContents: memoList[index][1],
             memoCompleted: memoList[index][2],
             deleteMemo: (context) => deleteMemoAction(index),
+            archiveMemo: () => archiveMemoaction,
           );
         },
       ),

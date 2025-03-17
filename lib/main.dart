@@ -4,7 +4,7 @@ import 'package:memoapp/pages/home_page.dart';
 import 'package:memoapp/pages/settings_page.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +17,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // マテリアルデザイン3の使用を指定する
-        useMaterial3: true
+        useMaterial3: true,
+        appBarTheme: AppBarTheme(
+          elevation: 2
+        )
       ),
       home: BottomNavigation(),
     );

@@ -17,12 +17,14 @@ samples, guidance on mobile development, and a full API reference.
 # memo-app
 setStateとSQWQLiteだけを使ったシンプルなメモアプリ
 - メモぼタイトルとメモのテキスト、日時を保存する
-- メモの追加。削除、編集を可能にする
+- メモの追加
+- メモの削除
+- archiveページにメモを移す
 -  DBはSQliteを使用してデータを永続化できるようにする
 # いつか実装したい機能
 - ダークモード
 - ListView.builderを使った並び替え機能
-- 入力するダイアログボックスを何とかしたい
+- dialogboxのUIを変える
 - 追加したメモを編集できる機能をつけたい
 - タブレットレイアウトに最適化させる
 # 実行方法
