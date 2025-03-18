@@ -19,7 +19,7 @@ class MemoTile extends StatelessWidget {
       padding: const EdgeInsets.only(top: 15,left: 15, right: 15),
       // delete memoTile
       child: Slidable(
-        startActionPane: ActionPane(
+        endActionPane: ActionPane(
           motion: const ScrollMotion(),
           children: [
             SlidableAction(

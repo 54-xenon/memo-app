@@ -9,10 +9,11 @@ class SettingsPage extends StatelessWidget {
        appBar: AppBar(
           title: const Text("Settings"),
        ),
-       body: Center(
-        child: Text("特に何もまだない"),
+       body: ListView(
+        children: [
+          Text("ここに設定のTileを配置する"),
+        ],
        ),
-       
     );
   }
 }

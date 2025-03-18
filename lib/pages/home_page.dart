@@ -16,7 +16,9 @@ final _titleController = TextEditingController();
 final _contentController = TextEditingController();
   // memolist 
   List memoList = [
-    ["aaaaaaaaa","aaaaaaaaaa"],
+    // memoNme
+    // memoContents
+
   ];
 
   // saveNewmemo
@@ -24,6 +26,7 @@ final _contentController = TextEditingController();
     // setStateを使った状態管理
     setState(() {
       memoList.add([_titleController.text, _contentController.text]);
+      // コントローラーをクリアする
       _titleController.clear();
       _contentController.clear();
     });
