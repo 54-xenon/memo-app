@@ -10,22 +10,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // タイトルのコントローラー
+    // タイトルのコントローラー
 final _titleController = TextEditingController();
 // メモのコントローラー
 final _contentController = TextEditingController();
-  // memo list
+  // memolist 
   List memoList = [
-    // memoName, memoContent, memoCompleted
-    ["first memo",
-     "メモのタイトルと内容を表示する。メモは今の所テキストベース、今後いろいろ機能を拡張していいきたい",
-     false],
+    // memoNme
+    // memoContents
+
   ];
+
   // saveNewmemo
   void saveNewTask() {
     // setStateを使った状態管理
     setState(() {
-      memoList.add([_titleController.text, _contentController.text, false]);
+      memoList.add([_titleController.text, _contentController.text]);
+      // コントローラーをクリアする
       _titleController.clear();
       _contentController.clear();
     });
@@ -46,6 +47,14 @@ final _contentController = TextEditingController();
       }
     );
   }
+
+  // delete memo
+  void deleteMemo(int index) {
+    setState(() {
+      memoList.removeAt(index);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +72,7 @@ final _contentController = TextEditingController();
           return MemoTile(
             memoName: memoList[index][0],
             memoContents: memoList[index][1],
-            memoCompleted: memoList[index][2],
+            deleteMemo: (context) => deleteMemo(index),
           );
         },
       ),
