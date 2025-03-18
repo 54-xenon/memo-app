@@ -4,17 +4,13 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 class MemoTile extends StatelessWidget {
   final String memoName;
   final dynamic memoContents;
-  final bool memoCompleted;
   Function(BuildContext) deleteMemo;
-  VoidCallback archiveMemo;
 
   MemoTile({
     super.key,
     required this.memoName,
     required this.memoContents,
-    required this.memoCompleted,
     required this.deleteMemo,
-    required this.archiveMemo,
   });
 
   @override
@@ -32,19 +28,6 @@ class MemoTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               icon: Icons.delete,
               label: "delete",
-            )
-          ],
-        ),
-        // archive memoTile
-        endActionPane: ActionPane(
-          motion: const ScrollMotion(),
-          children: [
-            SlidableAction(
-              onPressed: (context) => archiveMemo,
-              backgroundColor: Colors.green,
-              borderRadius: BorderRadius.circular(12),
-              icon: Icons.history,
-              label: "Archive",
             )
           ],
         ),

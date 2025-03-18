@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:memoapp/pages/archive_page.dart';
 import 'package:memoapp/pages/home_page.dart';
 import 'package:memoapp/pages/settings_page.dart';
 
@@ -40,7 +39,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
   // 各画面のリスト
   static const _screens = [
     HomePage(),
-    ArchivePage(),
     SettingsPage(),
   ];
 
@@ -48,7 +46,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int _serectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
     return Scaffold(
       body: _screens[_serectedIndex],
       bottomNavigationBar: NavigationBar(
@@ -64,11 +61,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
             selectedIcon: Icon(Icons.home),
             icon: Icon(Icons.home_outlined),
             label: "Home",
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.history),
-            icon: Icon(Icons.history_outlined),
-            label: "Aricive",
           ),
           NavigationDestination(
             selectedIcon: Icon(Icons.settings),
