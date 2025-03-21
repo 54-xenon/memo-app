@@ -15,7 +15,10 @@ final _titleController = TextEditingController();
 // メモのコントローラー
 final _contentController = TextEditingController();
   // memolist 
-  List memoList = [];
+  List memoList = [
+    // memoName
+    // memoContent
+  ];
 
   // saveNewmemo
   void saveNewTask() {
