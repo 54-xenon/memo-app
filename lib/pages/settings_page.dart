@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memoapp/util/settings_tile.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -11,7 +12,13 @@ class SettingsPage extends StatelessWidget {
        ),
        body: ListView(
         children: [
-          Text("ここに設定のTileを配置する"),
+          SettingsTile(
+            settingTitle: "全てのデータを削除",
+            settingSubtitle: "DB内の全てのデータが削除されます。この操作は復元できません",
+            onPressed: () {
+              
+            },
+          )
         ],
        ),
     );
