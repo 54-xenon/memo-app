@@ -16,9 +16,7 @@ class SettingsPage extends StatelessWidget {
             settingTitle: "全てのデータを削除",
             settingSubtitle: "DB内の全てのデータが削除されます。この操作は復元できません",
             onPressed: () {
-              // 1. show a daialog
-              // 2. all delete button
-              // 3. 元のデータに戻る
+              
             },
           )
         ],
